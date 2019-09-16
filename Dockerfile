@@ -8,9 +8,9 @@ RUN apt-get update && \
     apt-get -y install libxmu-dev tk-dev tcl-dev cmake git g++ \
     libglu1-mesa-dev ccache openssh-client openmpi-bin libopenmpi-dev \
     python3 libpython3-dev python3-pytest python3-numpy python3-sphinx python3-pip \
-    liboce-ocaf-dev libsuitesparse-dev python3-tk && \
+    liboce-ocaf-dev libsuitesparse-dev python3-tk  libicu-dev && \
     pip3 install sphinx_rtd_theme && \
-    python -m pip install git+https://github.com/sizmailov/pybind11-stubgen.git
+    python3 -m pip install git+https://github.com/sizmailov/pybind11-stubgen.git
 ENV PATH="/opt/netgen/bin:${PATH}" \
     NGSOLVE_SRC_DIR=/root/src/ngsolve_src \
     NGSOLVE_BUILD_DIR=/root/src/ngsolve_build \
