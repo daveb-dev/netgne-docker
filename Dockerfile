@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 ARG NGSOLVE_VERSION
 # if it's not repeated it's only usable in FROM
 ARG PYVER
-
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get -y install libxmu-dev tk-dev tcl-dev cmake git g++ \
     libglu1-mesa-dev ccache openssh-client openmpi-bin libopenmpi-dev \
