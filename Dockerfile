@@ -26,7 +26,7 @@ ADD catch.hpp /usr/local/include/
 RUN echo "DISTRIB_CODENAME=buster" > /etc/lsb-release && \
     git clone https://github.com/NGSolve/ngsolve.git ${NGSOLVE_SRC_DIR} && \
     cd ${NGSOLVE_SRC_DIR} && \
-    git checkout v6.2.1906 && \
+    git checkout b09e602 && \
     cd ${NGSOLVE_SRC_DIR}  && \
     git submodule update --init --recursive && \
     mkdir -p ${NGSOLVE_BUILD_DIR} && \
